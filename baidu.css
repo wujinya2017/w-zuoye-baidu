@@ -100,15 +100,16 @@ label{
   padding-left:10%
 }
 #tooltip{
-  width:305px;
+  width:295px;
   height:35px;
   background:url("https://passport.baidu.com/static/passpc-account/img/reg/check-username-bg-2x.png") no-repeat;
-  background-size:305px 35px;
+  background-size:295px 35px;
   font-size:10px;
   color:white;
   z-index:100;
   display:none;
-  padding:3px;
+  padding-top:5px;
+  padding-left:5px;
   position:absolute;
   top:16%;
   left:25%
