@@ -16,6 +16,8 @@ $(function(){
       $buttonzhuce = $('#button-zhuce'),
       $yanzhengvaliation = $('#yanzheng-valiation');
    
+  $forkMeGH.show("https://github.com/wujinya2017/w-zuoye-baidu");
+  $bszPageFooter.show("body");
 
   $username.focus(function(){
     $tooltip.css('display','block');
