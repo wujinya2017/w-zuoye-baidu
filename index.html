@@ -2,71 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>作业-百度</title>
-  <link rel="stylesheet" href="./baidu.css">
-
+  <title>定时器测试页面</title>
+  <link rel="stylesheet" href="./timer-button.css">
+  <link rel="icon" href="https://i.wangding.in/favicon.ico" sizes="48x48" type="image/png">
 </head>
 <body>
-  <div class="main">
-    <img id="main-img" alt="" src="https://passport.baidu.com/static/passpc-account/img/baidu.png"/>
-    <div id="main-div"><span>用科技</span><h2>让复杂的世界更简单</h2></div> 
-    <div id="main-bottom">
-      <a>帮助中心&nbsp;&nbsp;|</a>
-      <img alt="" src="https://passport.baidu.com/static/passpc-account/img/reg/service-2x.png"/>
-      <span>2020@Baidu</span>
-    </div>
-      <div class="content">
-      <h1>欢迎注册</h1><br>
-      <p id="kaiship">已有账号？<a>登录</a></p><br>
-      <div class="list-content">
-        <div id="tooltip">设置后不可更改,中英文均可,最长14个英文或7个汉字</div>
-        <div class="little-content">
-          <label>用户名</label>
-          <input type="text" id="username" name="username" placeholder="请设置用户名" autofocus autocomplete="off">
-        </div> 
-        <div id="username-valiation"></div>
-        <br>
-        <div class="little-content">
-          <label>手机号</label>
-          <input type="tel" id="phone" maxlength="11" name="phone" placeholder="可用于登录和找回密码">
-        </div>
-        <div id="tel-valiation"></div>
-        <br>
-
-        <div id="tooltip1">
-          <p id="toolp1">长度为8~14个字符</p>
-          <p id="toolp2">字母/数字以及标点符号至少包含2种</p>
-          <p id="toolp3">不允许有空格、中文</p>
-        </div>
-        <div class="little-content">
-          <label>密&nbsp;&nbsp;&nbsp;码</label>
-          <input type="password" id="password" name="password" placeholder="请设置登录密码">
-          <img alt="" id="xiaotubiao" src="https://passport.baidu.com/static/passpc-account/img/reg/pwdtip-2x.png"/>
-        </div>
-        <div id="password-valiation"></div>
-        <br>
-        <div class="little-content">
-          <label>验证码</label>
-          <input type="text" id="number-yan"  placeholder="请输入验证码" maxlength="6">
-          <input type="button" id="number-button" value="获取验证码">
-        </div>
-        <div id="yanzheng-valiation"></div>
-        <br>
-      </div>
-      <div id="button-zhuce-wai">
-        <button id="button-zhuce" name="button">注册</button>
-      </div>
-      <br>
-      <div id="bottom-input">
-        <input id="checkbox-input" type="checkbox"><span>阅读并接受<a>《百度用户协议》</a>及<a>《百度隐私权保护协议》</a></span>
-    </div>
-  </div>
-  </div>
-
-  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="./baidu.js"></script>
-  <script src="//i.wangding.in/js/fork-me-github.js"></script>
-  <script src="//i.wangding.in/js/bsz-page-footer.js"></script>
-
+<input id="add" type="button" value="添加定时器按钮">
+<hr>
+<div id="main"></div>
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="./timer-button.js"></script>
+<script>
+$(function(){
+  var $btnAdd = $('#add');
+  $btnAdd.click(function(){
+    $timerButton.show({
+      num:10,
+      title:'发送验证码',
+      onClick:function(){
+        console.log('点击了定时器')
+      }
+    });
+  })
+})
+</script>
 </body>
 </html>
